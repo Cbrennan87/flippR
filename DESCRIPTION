@@ -1,4 +1,4 @@
-Package: flipR
+Package: flippR
 Type: Package
 Title: Transposes Mulitple Data Columns into One for Easier Graphing and Analysis
 Version: 0.1.0
