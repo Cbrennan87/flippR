@@ -2,12 +2,12 @@
 % Please edit documentation in R/flippR.R
 \name{flippr}
 \alias{flippr}
-\title{This package allows you to select multiple columns from a dataset and stacks them on top of each other to allow for better graphing and analysis.}
+\title{Transposes data frame through wide-to-long pivoting}
 \usage{
 flippr(df, main_column, stack_columns, stacked_new_name, last_column_name)
 }
 \arguments{
-\item{df}{A dataframe.}
+\item{df}{A data frame.}
 
 \item{main_column}{A numeric or character vector.}
 
@@ -18,12 +18,13 @@ flippr(df, main_column, stack_columns, stacked_new_name, last_column_name)
 \item{last_column_name}{A character vector.}
 }
 \value{
-A dataframe.
+A data frame.
 }
 \description{
-This package allows you to select multiple columns from a dataset and stacks them on top of each other to allow for better graphing and analysis.
+Transposes data frame through wide-to-long pivoting
 }
 \examples{
 flippr(iris, 5, c(1:4), "Attribute", "Length_Width")
+
 flippr(iris, "Species", c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"), "Plant_Attribute", "Measurement")
 }

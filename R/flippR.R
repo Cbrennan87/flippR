@@ -1,13 +1,15 @@
-#' This package allows you to select multiple columns from a dataset and stacks them on top of each other to allow for better graphing and analysis.
+#' Transposes data frame through wide-to-long pivoting
 #'
-#' @param df A dataframe.
+#' @param df A data frame.
 #' @param main_column A numeric or character vector.
 #' @param stack_columns A numeric or character vector.
 #' @param stacked_new_name A character vector.
 #' @param last_column_name A character vector.
-#' @returns A dataframe.
+#' @returns A data frame.
+#' @import tidyr
 #' @examples
 #' flippr(iris, 5, c(1:4), "Attribute", "Length_Width")
+#'
 #' flippr(iris, "Species", c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"), "Plant_Attribute", "Measurement")
 
 
