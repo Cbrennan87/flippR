@@ -31,7 +31,6 @@ flippr <- function(df,main_column,stack_columns,stacked_new_name,last_column_nam
   y <- df[stack_columns]
 
   z <- df[,main_column]
-
   b <- data.frame();
   c <- data.frame();
   for (i in 1:ncol(y))
@@ -54,8 +53,9 @@ flippr <- function(df,main_column,stack_columns,stacked_new_name,last_column_nam
   New_dfset$Numeric <- Variable3$value
   New_dfset<- New_dfset[,-1]
 
+  z2 <- names(df[main_column])
 
-  colnames(New_dfset) <- c(main_column,stacked_new_name,last_column_name)
+  colnames(New_dfset) <- c(z2,stacked_new_name,last_column_name)
 
   return(New_dfset)
 
